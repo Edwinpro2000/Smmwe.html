@@ -764,14 +764,14 @@ function mPlay(id,fromGesture){
   set.music=id;saveSet();
   if(!id){mAudio.pause();mAudio.removeAttribute("src");mAudio.load();mWait=false;mUI();return;}
   mAudio.loop=set.mmode==="repeat";
-  mAudio.src="music/"+id+".mp3";
+  mAudio.src=id+".mp3";
   const pr=mAudio.play();
   if(pr&&pr.catch)pr.catch(()=>{mWait=true;mUI();});
   mUI();
 }
 mAudio.addEventListener("playing",()=>{mWait=false;mUI();});
 mAudio.addEventListener("pause",mUI);
-mAudio.addEventListener("error",()=>{if(set.music){toast("Music file not found: upload the music folder");mUI();}});
+mAudio.addEventListener("error",()=>{if(set.music){toast("Music file not found: upload the mp3 files next to the page");mUI();}});
 mAudio.addEventListener("ended",()=>{
   if(set.mmode!=="next"||!set.music)return;
   const i=TRACKS.findIndex(t=>t[0]===set.music);mPlay(TRACKS[(i+1)%TRACKS.length][0]);
