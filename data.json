@@ -29,17 +29,6 @@
       "color": "#111111"
     }
   ],
-  "levels": [
-    {
-      "id": "mpv6otpt",
-      "name": "Q",
-      "creator": "Ejemplo",
-      "diff": "Expert",
-      "attempts": 111,
-      "status": "verified",
-      "desc": "Q",
-      "video": ""
-    }
-  ],
-  "updated": "2026-10-21T03:18:12.492Z"
+  "levels": [],
+  "updated": "2026-10-21T03:19:00.712Z"
 }
